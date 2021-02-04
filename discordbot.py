@@ -33,7 +33,7 @@ async def on_message(message):
     if message.author.bot:
         return 
     # メッセージの本文が 鳴いて だった場合
-    if message.content == "":
+    if message.content == "gacha":
         # 送信するメッセージをランダムで決める
         content = random.choice(random_contents)
         # メッセージが送られてきたチャンネルに送る
