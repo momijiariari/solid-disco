@@ -1,6 +1,7 @@
 from discord.ext import commands
 import os
 import traceback
+import random
 
 bot = commands.Bot(command_prefix='/')
 token = os.environ['DISCORD_BOT_TOKEN']
@@ -27,7 +28,7 @@ async def ping(ctx):
 
 random_content=[magnam, magnam, magnam, "ふわふわ"]
     
-@client.event
+@bot.event
 async def on_message(message):
     # 送信者がbotである場合は弾く
     if message.author.bot:
