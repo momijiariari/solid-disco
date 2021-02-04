@@ -28,8 +28,8 @@ async def ping(ctx):
 
 random_content=[magnam, magnam, magnam, "ふわふわ"]
     
-@bot.event
-async def on_message(message):
+@bot.command()
+async def message0(message):
     # 送信者がbotである場合は弾く
     if message.author.bot:
         return 
