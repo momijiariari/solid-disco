@@ -12,7 +12,13 @@ async def on_command_error(ctx, error):
     orig_error = getattr(error, "original", error)
     error_msg = ''.join(traceback.TracebackException.from_exception(orig_error).format())
     await ctx.send(error_msg)
-
+    
+@bot.event
+async def on_ready():
+    print('Logged in as')
+    print(bot.user.name)
+    print(bot.user.id)
+    print('------')
 
 @bot.command()
 async def neko(ctx):
@@ -27,13 +33,6 @@ async def ping(ctx):
     await ctx.send('pong')
 
 random_content=[magnam, magnam, magnam, "ふわふわ"]
-    
-@bot.event
-async def on_ready():
-    print('Logged in as')
-    print(bot.user.name)
-    print(bot.user.id)
-    print('------')
 
 @bot.command()
 async def add(left : int, right : int):
