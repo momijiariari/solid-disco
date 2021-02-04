@@ -28,19 +28,17 @@ async def ping(ctx):
 
 random_content=[magnam, magnam, magnam, "ふわふわ"]
     
+@bot.event
+async def on_ready():
+    print('Logged in as')
+    print(bot.user.name)
+    print(bot.user.id)
+    print('------')
+
 @bot.command()
-async def message0(message):
-    # 送信者がbotである場合は弾く
-    if message.author.bot:
-        return 
-    # メッセージの本文が 鳴いて だった場合
-    if message.content == "gacha":
-        # 送信するメッセージをランダムで決める
-        content = random.choice(random_contents)
-        # メッセージが送られてきたチャンネルに送る
-        await message.channel.send(content)
-    elif message.content == "おはよう":
-        await message.channel.send("おはよう！！")
+async def add(left : int, right : int):
+    """Adds two numbers together."""
+    await bot.say(left + right)
 
 
 bot.run(token)
