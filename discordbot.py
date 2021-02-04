@@ -24,7 +24,7 @@ async def molcar(ctx):
 async def ping(ctx):
     await ctx.send('pong')
 
-random_content=[magnam, magnam, magnam, "ふわふわ"]
+#random_content=[magnam, magnam, magnam, "ふわふわ"]
 
 @bot.command()
 async def add(left : int, right : int):
