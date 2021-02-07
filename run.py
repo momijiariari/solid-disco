@@ -8,4 +8,3 @@ with open('./key', 'r') as f:
     key = f.read()
 
 client.run(token)
- # key[0:-1]
