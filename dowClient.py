@@ -18,7 +18,7 @@ class dowClient(discord.Client):
         try:
             if not s[0] in self.forbidden_commands_per_phase[self.phase]:
                 gen = self.commands[s[0]](s[1:], author)
-                if gen != None:
+                if gen is not None:
                     for mem, mes in gen:
                         await self.send_message(self.createDest(mem), mes)
         except KeyError:
