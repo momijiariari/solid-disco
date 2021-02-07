@@ -1,4 +1,4 @@
-import discord
+from discord.ext import commands
 from management.PlayerMaster import PlayerMaster
 from management.JobMaster import JobMaster
 from management.GameMaster import GameMaster
