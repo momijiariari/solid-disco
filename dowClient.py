@@ -4,7 +4,7 @@ from management.JobMaster import JobMaster
 from management.GameMaster import GameMaster
 from time import sleep
 
-class dowClient(discord.Client):
+class dowClient(commands.Bot(command_prefix='/')):
 
     async def on_ready(self):
         print('Logged in')
