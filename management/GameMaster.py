@@ -48,7 +48,7 @@ class GameMaster():
 
     def sunrise(self):
         # 怪盗の処理
-        if not self.thief_exchange_target is None:
+        if self.thief_exchange_target is not None:
             tmp = self.thief_exchange_actor.Iam()
             self.thief_exchange_actor.Ibecome(self.thief_exchange_target.Iam())
             self.thief_exchange_target.Ibecome(tmp)
