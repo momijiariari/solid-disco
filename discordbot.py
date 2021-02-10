@@ -15,6 +15,10 @@ async def on_command_error(ctx, error):
 @bot.command()
 async def neko(ctx):
     await ctx.send('にゃーん')
+    
+@bot.command()
+async def Neko(ctx, *args):
+    await ctx.send(args)
 
 @bot.command()
 async def molcar(ctx):
