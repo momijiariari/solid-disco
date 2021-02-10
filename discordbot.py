@@ -18,7 +18,9 @@ async def neko(ctx):
     
 @bot.command()
 async def Neko(ctx, *args):
-    await ctx.send(args)
+    for arg in args:
+        argnya = arg + 'にゃーん'
+        await ctx.send(argnya)
 
 @bot.command()
 async def molcar(ctx):
