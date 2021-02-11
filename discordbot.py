@@ -23,6 +23,8 @@ async def on_message(message):
         if members != []:
             for member in members:
                 await message.channel.send(member)
+        else:
+            await message.channel.send("fuwa fuwa")
     await bot.process_commands(message)
 
 @bot.command()
