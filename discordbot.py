@@ -16,6 +16,7 @@ async def on_command_error(ctx, error):
 async def on_message(message):
     if message.content == "あ":
         await message.channel.send("ああ")
+    await bot.process_commands(message)
 
 @bot.command()
 async def neko(ctx):
