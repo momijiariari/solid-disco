@@ -40,4 +40,8 @@ async def ping(ctx):
     content = random.choice(random_contents)
     await ctx.send(content)
 
+@bot.command()
+async def nekoneko(ctx):
+    await ctx.author.send('にゃーん')
+
 bot.run(token)
