@@ -13,17 +13,14 @@ async def on_command_error(ctx, error):
     await ctx.send(error_msg)
 
 @bot.event
-async def on_message(ctx, message):
-    s = message.content.split(' ')
-    author = message.author
-    try:
-        if not s[0] in ctx.forbidden_commands_per_phase[ctx.phase]:
-            gen = ctx.commands[s[0]](s[1:], author)
-            if gen is not None:
-                for mem, mes in gen:
-                    await ctx.send_message(ctx.createDest(mem), mes)
-    except KeyError:
-        pass
+async def on_message(message):
+    if message.content == "!人狼": #ゲーム開始および役職設定のメッセージ
+        if situation_number == 0:
+            await message.channel.send("使用したい役職の絵文字を使用したい数リアクションしてください。\n役職およびその数を決定したら\n!役職決定\nとコマンドを送ってください。")
+        situation_number+=1  #ゲームの進行度は1
+
+        if situation_number >= 1: #進行度が１異常だったら!人狼を受け付けない
+            await message.channel.send("そのコマンドは既に実行しています")
 
 @bot.command()
 async def neko(ctx):
