@@ -15,10 +15,10 @@ async def on_command_error(ctx, error):
 
 @bot.event
 async def on_message(message):
-    if message.content == "!人狼":
+    if message.content == "あ":
         if situation_number == 0:
             await message.channel.send("使用したい役職の絵文字を使用したい数リアクションしてください。\n役職およびその数を決定したら\n!役職決定\nとコマンドを送ってください。")
-        situation_number += 1
+            situation_number += 1
 
         if situation_number >= 1:
             await message.channel.send("そのコマンドは既に実行しています")
