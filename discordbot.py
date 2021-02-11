@@ -14,7 +14,9 @@ async def on_command_error(ctx, error):
 
 @bot.event
 async def on_message(message):
-    if message.content == "あ":
+    if message.author.bot:
+        return
+    elif message.content == "あ":
         await message.channel.send("ああ")
     await bot.process_commands(message)
 
