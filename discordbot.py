@@ -18,6 +18,11 @@ async def on_message(message):
         return
     elif message.content == "あ":
         await message.channel.send("ああ")
+    elif message.content == "vc":
+        members = [member.name for member in message.author.voice.channel.members]
+        if members != []:
+            for menber in members:
+                await message.channel.send(member)
     await bot.process_commands(message)
 
 @bot.command()
