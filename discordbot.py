@@ -20,6 +20,7 @@ async def on_message(message):
         await message.channel.send("ああ")
     elif message.content == "vc":
         members = [member.name for member in message.author.voice.channel.members]
+        await message.channel.send(members)
         if members != []:
             for member in members:
                 await message.channel.send(member)
