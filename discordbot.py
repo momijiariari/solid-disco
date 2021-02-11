@@ -11,7 +11,7 @@ async def on_command_error(self, error):
     orig_error = getattr(error, "original", error)
     error_msg = ''.join(traceback.TracebackException.from_exception(orig_error).format())
     await self.send(error_msg)
-    
+
 @bot.event
 async def on_message(self, message):
     s = message.content.split(' ')
