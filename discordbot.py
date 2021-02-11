@@ -21,7 +21,7 @@ async def on_message(message):
     elif message.content == "vc":
         members = [member.name for member in message.author.voice.channel.members]
         if members != []:
-            for menber in members:
+            for member in members:
                 await message.channel.send(member)
     await bot.process_commands(message)
 
