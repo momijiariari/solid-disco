@@ -24,7 +24,7 @@ async def on_message(message):
         # await message.channel.send(members)
         await message.channel.send(message.author.voice.channel.members)
         for member in message.author.voice.channel.members:
-            await member.send(member)
+            await member.send("member")
         if members != []:
             for member in members:
                 await message.channel.send(member)
