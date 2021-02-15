@@ -57,6 +57,10 @@ async def nekoneko(ctx):
     await ctx.author.send('にゃーん')
 
 @bot.command()
+async def ksk(ctx):
+    yield 'ksk'
+
+@bot.command()
 async def getm(ctx):
     if ctx.author.voice is None:
         await ctx.send("Error! ボイスチャンネルに接続していません")
