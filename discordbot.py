@@ -56,4 +56,14 @@ async def ping(ctx):
 async def nekoneko(ctx):
     await ctx.author.send('にゃーん')
 
+@bot.command()
+async def getm(ctx):
+    if ctx.author.voice is None:
+        await ctx.send("Error! ボイスチャンネルに接続していません")
+        return
+    else:
+        members_list = ctx.author.voice.channel.members
+        n_members = len(members_list)
+        await ctx.send(members_list, n_members) 
+
 bot.run(token)
