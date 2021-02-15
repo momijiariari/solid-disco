@@ -64,6 +64,6 @@ async def getm(ctx):
     else:
         members_list = ctx.author.voice.channel.members
         n_members = len(members_list)
-        await ctx.send(members_list, n_members) 
+        await ctx.send(members_list, n_members)
 
 bot.run(token)
