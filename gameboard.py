@@ -1,5 +1,3 @@
-import random
-
 class Gameboard():
 
     def __init__(self, num):
