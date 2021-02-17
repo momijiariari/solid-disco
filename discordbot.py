@@ -63,7 +63,7 @@ async def ksk(ctx):
 @bot.command()
 async def getm(ctx):
     if ctx.author.voice is None:
-        await ctx.send("Error! ボイスチャンネルに接続していません")
+        await ctx.send("Error! ボイスチャンネルに接続していません　")
         return
     else:
         members_list = ctx.author.voice.channel.members
